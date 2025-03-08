@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(45deg, #007bff, #ff0095);
+    color: white;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: lighter;
+    transition: 1s;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: url("./image.png") no-repeat center center / cover;
+    color: white;
+}
+
+.content-section {
+    padding: 40px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.skills .skill {
+    margin-bottom: 10px;
+}
+
+.bar {
+    width: 100%;
+    background: #ddd;
+    height: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: #007bff;
+}
+
+.project-list {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.project:hover {
+    background: #0056b3;
+}
+
+footer {
+    text-align: center;
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
+}
+
+.blll{
+    color: black;
+}
