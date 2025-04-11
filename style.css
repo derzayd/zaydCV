@@ -1,67 +1,107 @@
+html{
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #000000;
     color: #333;
+    font-size: 18px; /* Increase base font size */
 }
 
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background: linear-gradient(45deg, #007bff, #62d1ae);
-    color: white;
-    position: sticky;
+    padding: 30px; /* Increased padding for better spacing */
+    background: linear-gradient(45deg, #feffff5f, #62d1ae20);
+    color: rgb(0, 0, 0);
+    position: fixed;
     top: 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     z-index: 1000;
+    width: 100vw;
+}
+main{
+    background-color: #ffffff;
+}
+#home{
+    height: 100vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.118),rgba(0, 255, 26, 0)),url(./bg.jpg);
+    background-position:center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 header .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px; /* Increased gap */
 }
 
 header .logo img {
-    width: 50px;
-    height: 50px;
+    width: 80px; /* Increased logo size */
+    height: 80px;
     border-radius: 50%;
 }
-
+nav{
+    margin-right: 4em;
+}
 nav ul {
     display: flex;
-    gap: 1.5rem;
+    gap: 2rem; /* Increased gap between navigation links */
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul li a {
-    color: white;
-    font-weight: lighter;
+nav a {
+    color: rgb(37, 35, 35);
+    font-weight:bolder;
+    font-size: 20px; /* Increased font size */
     transition: 1s;
+    position: relative;
+    text-decoration: none;
+}
+nav a::after{
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 0;
+    background-color: #ffffff;
+    height: 3px;
+    width: 0;
+    transition: width 0.3s ease;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+nav a:hover::after {
+    width: 100%;
 }
+#about{
+    scroll-margin-top: 9em;
+    padding: 30px;
+    display: flex;
+    gap: 2em;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 1px 2px 15px grey;
+    margin: 20px 40px;
 
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-    background: url("./image.png") no-repeat center center / cover;
-    color: white;
+}
+.contact-info-skills, .about-me{
+    width: 50%;
 }
 
 .content-section {
-    padding: 40px;
+    padding: 60px; /* Increased padding in sections */
     background: white;
-    margin: 20px auto;
+    margin: 40px auto; /* Increased margin for bigger spacing between sections */
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 900px;
+    max-width: 1000px; /* Made the max width bigger */
 }
 
 .about-container {
@@ -70,14 +110,10 @@ nav ul li a:hover {
     flex-wrap: wrap;
 }
 
-.skills .skill {
-    margin-bottom: 10px;
-}
-
 .bar {
     width: 100%;
     background: #ddd;
-    height: 10px;
+    height: 15px; /* Increased height of the progress bars */
     border-radius: 5px;
     overflow: hidden;
 }
@@ -89,7 +125,7 @@ nav ul li a:hover {
 
 .project-list {
     display: flex;
-    gap: 15px;
+    gap: 25px; /* Increased gap between project items */
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -97,8 +133,9 @@ nav ul li a:hover {
 .project {
     background: #007bff;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 15px 30px; /* Increased padding for bigger buttons */
+    border-radius: 10px; /* Increased border radius for a smoother look */
+    font-size: 18px; /* Increased font size */
     text-decoration: none;
     transition: 0.3s;
 }
@@ -111,9 +148,45 @@ footer {
     text-align: center;
     background: #2c3e50;
     color: white;
-    padding: 20px;
+    padding: 30px; /* Increased padding for better spacing */
 }
 
 .blll{
-    color: black;
+    color: rgb(255, 255, 255);
+    font-size: 40px; /* Increased font size for hero section headings */
+}
+
+#contact .contact-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Space between each element */
+    justify-content: space-between;
+}
+
+#contact .contact-form input,
+#contact .contact-form textarea,
+#contact .contact-form button {
+    width: 48%; /* Make the inputs and button take up nearly half of the width */
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contact .contact-form button {
+    width: 48%; /* Same width for the button */
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contact .contact-form button:hover {
+    background-color: #0056b3;
+}
+
+#contact .contact-form textarea {
+    width: 100%; /* Textarea should take up the full width */
+    height: 150px;
+    resize: none; /* Disable resizing */
 }
